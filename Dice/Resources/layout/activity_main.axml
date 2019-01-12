@@ -1,29 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/container"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/llv_mainContainer"
+		android:background="#ff00796b">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/llh_firstRow"
+			android:gravity="center"
+			android:layout_marginTop="25dp">
+			<ImageView
+				android:src="@drawable/die1_white"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_marginEnd="25dp"
+				android:id="@+id/die1" />
+			<ImageView
+				android:src="@drawable/die2_white"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_marginStart="25dp"
+				android:id="@+id/die2" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/ll_secondRow"
+			android:gravity="center"
+			android:layout_marginTop="25dp">
+			<ImageView
+				android:src="@drawable/die3_white"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_marginEnd="25dp"
+				android:id="@+id/die3"
+				android:layout_marginRight="20dp" />
+			<ImageView
+				android:src="@drawable/die4_white"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_marginStart="25dp"
+				android:id="@+id/die4" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/ll_thridRow"
+			android:gravity="center"
+			android:layout_marginTop="25dp">
+			<ImageView
+				android:src="@drawable/die5_white"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_marginEnd="25dp"
+				android:id="@+id/die5" />
+			<ImageView
+				android:src="@drawable/die6_white"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:layout_marginStart="25dp"
+				android:id="@+id/die6" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="50dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/llh_bottomContainer"
+			android:background="#ff1565c0" >
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/linearLayout1"
+				android:background="#ffffa000"
+				android:layout_weight="0.5">
+				<android.support.design.widget.FloatingActionButton
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/floatingActionButton2" />
+				<android.support.design.widget.FloatingActionButton
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/floatingActionButton1" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/linearLayout2"
+				android:background="#ff8e24aa"
+				android:layout_weight="0.5">
+				<Button
+					android:text="@string/button_RollDice"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/button1" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_home" />
+	<android.support.design.widget.BottomNavigationView
+		android:id="@+id/navigation"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="0dp"
+		android:layout_marginStart="0dp"
+		android:background="?android:attr/windowBackground"
+		android:layout_alignParentBottom="true"
+		app:menu="@menu/navigation" >
+		
+	</android.support.design.widget.BottomNavigationView>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:background="?android:attr/windowBackground"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/navigation" />
-
+	
 </RelativeLayout>
