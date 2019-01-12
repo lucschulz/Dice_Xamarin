@@ -2564,24 +2564,6 @@ namespace Dice
 			// aapt resource value: 0x7f0800a5
 			public const int design_navigation_view = 2131230885;
 			
-			// aapt resource value: 0x7f08008e
-			public const int die1 = 2131230862;
-			
-			// aapt resource value: 0x7f08008f
-			public const int die2 = 2131230863;
-			
-			// aapt resource value: 0x7f080091
-			public const int die3 = 2131230865;
-			
-			// aapt resource value: 0x7f080092
-			public const int die4 = 2131230866;
-			
-			// aapt resource value: 0x7f080094
-			public const int die5 = 2131230868;
-			
-			// aapt resource value: 0x7f080095
-			public const int die6 = 2131230869;
-			
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
 			
@@ -2644,6 +2626,24 @@ namespace Dice
 			
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
+			
+			// aapt resource value: 0x7f08008e
+			public const int img_die1 = 2131230862;
+			
+			// aapt resource value: 0x7f08008f
+			public const int img_die2 = 2131230863;
+			
+			// aapt resource value: 0x7f080091
+			public const int img_die3 = 2131230865;
+			
+			// aapt resource value: 0x7f080092
+			public const int img_die4 = 2131230866;
+			
+			// aapt resource value: 0x7f080094
+			public const int img_die5 = 2131230868;
+			
+			// aapt resource value: 0x7f080095
+			public const int img_die6 = 2131230869;
 			
 			// aapt resource value: 0x7f0800b7
 			public const int info = 2131230903;

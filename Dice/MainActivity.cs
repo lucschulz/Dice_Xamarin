@@ -1,6 +1,5 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
@@ -12,6 +11,7 @@ namespace Dice
     public class MainActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         TextView textMessage;
+        private Dice dice;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -23,8 +23,22 @@ namespace Dice
             navigation.SetOnNavigationItemSelectedListener(this);
 
             ConfigureButtons();
+
+            Dice.CurrentDieColor = DieColor.White;
+
+            dice = new Dice();
+            ConfigureDice();
+            SetDiceVisibility(6);
         }
 
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            dice.ChangeColorOfDice();
+        }
+
+        #region BUTTONS
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -56,18 +70,58 @@ namespace Dice
 
         private void BtnRemoveDie_Click(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            MakeLastDieInvisible();
         }
 
         private void BtnAddDie_Click(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            MakeNextDieVisible();
         }
 
         private void BtnRollDice_Click(object sender, System.EventArgs e)
         {
-            Toast.MakeText(this, Resource.String.testMessage, ToastLength.Short);
+            dice.RollDice();
         }
+        #endregion
+
+
+
+        private void SetDiceVisibility(int numberOfDiceVisible)
+        {
+            dice.SetDiceVisibility(numberOfDiceVisible);
+        }
+
+        // Adds a die up to a maximum of six.
+        private void MakeNextDieVisible()
+        {
+            dice.MakeNextDieVisible();
+        }
+
+        // Remove the last die in the list.
+        private void MakeLastDieInvisible()
+        {
+            dice.MakeLastDieInvisible();
+        }
+
+
+
+        private void ConfigureDice()
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                string imgId = "img_die" + i;
+                int imageResourceId = Resources.GetIdentifier(imgId, "id", PackageName);
+                ImageView imgView = (ImageView)FindViewById(imageResourceId);
+
+                Die die = new Die(imgView, Dice.CurrentDieColor);
+                die.SetVisible(true);
+                dice.AddDieToArray(die);
+                dice.RollDice();
+            }
+        }
+
+
+
     }
 }
 

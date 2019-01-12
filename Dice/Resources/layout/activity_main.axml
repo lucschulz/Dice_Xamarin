@@ -28,13 +28,13 @@
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:layout_marginEnd="25dp"
-				android:id="@+id/die1" />
+				android:id="@+id/img_die1" />
 			<ImageView
 				android:src="@drawable/die2_white"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:layout_marginStart="25dp"
-				android:id="@+id/die2" />
+				android:id="@+id/img_die2" />
 		</LinearLayout>
 		<LinearLayout
 			android:orientation="horizontal"
@@ -50,14 +50,14 @@
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:layout_marginEnd="25dp"
-				android:id="@+id/die3"
+				android:id="@+id/img_die3"
 				android:layout_marginRight="20dp" />
 			<ImageView
 				android:src="@drawable/die4_white"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:layout_marginStart="25dp"
-				android:id="@+id/die4" />
+				android:id="@+id/img_die4" />
 		</LinearLayout>
 		<LinearLayout
 			android:orientation="horizontal"
@@ -73,13 +73,13 @@
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:layout_marginEnd="25dp"
-				android:id="@+id/die5" />
+				android:id="@+id/img_die5" />
 			<ImageView
 				android:src="@drawable/die6_white"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:layout_marginStart="25dp"
-				android:id="@+id/die6" />
+				android:id="@+id/img_die6" />
 		</LinearLayout>
 		<LinearLayout
 			android:orientation="horizontal"
