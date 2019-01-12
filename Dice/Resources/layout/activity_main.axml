@@ -85,27 +85,31 @@
 			android:orientation="horizontal"
 			android:minWidth="25px"
 			android:minHeight="50dp"
+			android:layout_marginTop="25dp"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/llh_bottomContainer"
-			android:background="#ff1565c0" >
+			android:id="@+id/llh_bottomContainer" >
 			<LinearLayout
 				android:orientation="horizontal"
 				android:minWidth="25px"
 				android:minHeight="25px"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
-				android:id="@+id/linearLayout1"
-				android:background="#ffffa000"
-				android:layout_weight="0.5">
+				android:id="@+id/llh_plusMinus"
+				android:layout_weight="0.5"
+				android:gravity="center_vertical">
 				<android.support.design.widget.FloatingActionButton
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/floatingActionButton2" />
+					android:src="@drawable/minusblue"
+					android:id="@+id/btnRemoveDie"
+					android:layout_marginLeft="25dp" />
 				<android.support.design.widget.FloatingActionButton
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/floatingActionButton1" />
+					android:src="@drawable/plusblue"
+					android:id="@+id/btnAddDie"
+					android:layout_marginLeft="25dp" />
 			</LinearLayout>
 			<LinearLayout
 				android:orientation="horizontal"
@@ -113,14 +117,15 @@
 				android:minHeight="25px"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
-				android:id="@+id/linearLayout2"
-				android:background="#ff8e24aa"
-				android:layout_weight="0.5">
+				android:id="@+id/llh_rollDice"
+				android:layout_weight="0.5"
+				android:gravity="right|center_vertical">
 				<Button
 					android:text="@string/button_RollDice"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:id="@+id/button1" />
+					android:layout_marginRight="25dp"
+					android:id="@+id/btnRollDice"/>
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>
