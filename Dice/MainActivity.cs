@@ -21,7 +21,10 @@ namespace Dice
             textMessage = FindViewById<TextView>(Resource.Id.message);
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
             navigation.SetOnNavigationItemSelectedListener(this);
+
+            ConfigureButtons();
         }
+
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -37,6 +40,33 @@ namespace Dice
                     return true;
             }
             return false;
+        }
+
+        private void ConfigureButtons()
+        {
+            FloatingActionButton btnRemoveDie = FindViewById<FloatingActionButton>(Resource.Id.btnRemoveDie);
+            btnRemoveDie.Click += BtnRemoveDie_Click;
+
+            FloatingActionButton btnAddDie = FindViewById<FloatingActionButton>(Resource.Id.btnAddDie);
+            btnAddDie.Click += BtnAddDie_Click;
+
+            Button btnRollDice = FindViewById<Button>(Resource.Id.btnRollDice);
+            btnRollDice.Click += BtnRollDice_Click;
+        }
+
+        private void BtnRemoveDie_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void BtnAddDie_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void BtnRollDice_Click(object sender, System.EventArgs e)
+        {
+            Toast.MakeText(this, Resource.String.testMessage, ToastLength.Short);
         }
     }
 }

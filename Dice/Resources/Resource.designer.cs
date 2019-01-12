@@ -3382,6 +3382,9 @@ namespace Dice
 			// aapt resource value: 0x7f090026
 			public const int status_bar_notification_info_overflow = 2131296294;
 			
+			// aapt resource value: 0x7f09002c
+			public const int testMessage = 2131296300;
+			
 			// aapt resource value: 0x7f090029
 			public const int title_dashboard = 2131296297;
 			

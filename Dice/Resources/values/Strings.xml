@@ -6,4 +6,7 @@
 
   <!-- BUTTONS -->
   <string name="button_RollDice">Roll Dice!</string>
+  
+  <!-- TOAST -->
+  <string name="testMessage">Test!</string>
 </resources>
