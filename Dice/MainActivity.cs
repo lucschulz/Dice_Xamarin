@@ -28,14 +28,14 @@ namespace Dice
 
             dice = new Dice();
             ConfigureDice();
-            SetDiceVisibility(6);
+            SetAmountOfVisibleDice(6);
         }
 
 
         protected override void OnResume()
         {
             base.OnResume();
-            dice.ChangeColorOfDice();
+            dice.ReloadDice();
         }
 
         #region BUTTONS
@@ -81,12 +81,13 @@ namespace Dice
         private void BtnRollDice_Click(object sender, System.EventArgs e)
         {
             dice.RollDice();
+            dice.ReloadDice();
         }
         #endregion
 
 
 
-        private void SetDiceVisibility(int numberOfDiceVisible)
+        private void SetAmountOfVisibleDice(int numberOfDiceVisible)
         {
             dice.SetDiceVisibility(numberOfDiceVisible);
         }
@@ -119,9 +120,6 @@ namespace Dice
                 dice.RollDice();
             }
         }
-
-
-
     }
 }
 

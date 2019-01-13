@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using System.Collections.Generic;
 
 namespace Dice
 {
     class Dice
     {
-        private List<Die> diceList = new List<Die>();
+        private List<Die> diceList;
         public static DieColor CurrentDieColor { get; set; }
+
+        public Dice()
+        {
+            diceList = new List<Die>();
+        }
+
+
 
         public void RollDice()
         {
@@ -26,7 +23,7 @@ namespace Dice
         }
 
 
-        public void ChangeColorOfDice()
+        public void ReloadDice()
         {
             foreach (Die die in diceList)
             {
@@ -42,16 +39,14 @@ namespace Dice
         /// <param name="numberOfDiceVisible">The number of dice to display to the user.</param>
         public void SetDiceVisibility(int numberOfDiceVisible)
         {
-            Die[] dice = diceList.ToArray();
-
-            foreach (Die die in dice)
+            foreach (Die die in diceList)
             {
                 die.SetVisible(false);
             }
 
             for (int i = 0; i < numberOfDiceVisible; i++)
             {
-                Die die = dice[i];
+                Die die = diceList[i];
                 die.SetVisible(true);
             }
         }
