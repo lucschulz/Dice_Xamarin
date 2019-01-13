@@ -20,10 +20,12 @@ namespace Dice
             {
                 die.RollDie();
             }
+
+            ReloadDice();
         }
 
 
-        public void ReloadDice()
+        private void ReloadDice()
         {
             foreach (Die die in diceList)
             {

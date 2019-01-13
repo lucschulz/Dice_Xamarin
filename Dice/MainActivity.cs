@@ -35,7 +35,7 @@ namespace Dice
         protected override void OnResume()
         {
             base.OnResume();
-            dice.ReloadDice();
+            dice.RollDice();
         }
 
         #region BUTTONS
@@ -81,7 +81,6 @@ namespace Dice
         private void BtnRollDice_Click(object sender, System.EventArgs e)
         {
             dice.RollDice();
-            dice.ReloadDice();
         }
         #endregion
 
